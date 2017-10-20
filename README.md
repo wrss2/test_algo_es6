@@ -1,4 +1,4 @@
-# Test N[PackingString]
+# Test N[PackingString] ES6
 
 - node test.js fg2[a]3[b]fdgdf2[c]2[c2[c2[c2[c2[c2[c2[c2[c2[c2[c]]]]]]]]]]2[d]2[w]asdas4[k]
 - node test.js aaasa2[aasd]sdsd3[bc]sadasd
