@@ -26,7 +26,7 @@ Object.defineProperty(Array.prototype, 'optForEach', {
   enumerable: false,
   value: foreach
 });
-
+ 
 var algo = function (string) {
   var pattern = /(\d+\[)[a-zA-Z$]+(\])/ig;
   arr = string.match(pattern);
