@@ -1,9 +1,9 @@
 require('babel-core/register');
 
 var count = 0;
-var ps1 = "fg2[a]3[b]fdgdf2[c]2[c2[c2[c2[c2[c2[c2[c2[c2[c2[c]]]]]]]]]]2[d]2[w]asdas4[k]";
-var ps2 = "aaasa2[aasd]sdsd3[bc]sadasd";
-var ps3 = "xxx2[xxa2[b]yy2[c]yy]ff2[d]xx";
+const ps1 = "fg2[a]3[b]fdgdf2[c]2[c2[c2[c2[c2[c2[c2[c2[c2[c2[c]]]]]]]]]]2[d]2[w]asdas4[k]";
+const ps2 = "aaasa2[aasd]sdsd3[bc]sadasd";
+const ps3 = "xxx2[xxa2[b]yy2[c]yy]ff2[d]xx";
 const args = process.argv;
 
 
@@ -43,14 +43,14 @@ var algo = function(string){
 		});
    }
 
-  console.log("Krok: "+count)
-  console.log("Wyszukane wzorce: "+ arr);
-  console.log("Rozpakowany string: " + string);
+  console.log(`Krok: ${count}`)
+  console.log(`Wyszukane wzorce: ${arr}`);
+  console.log(`Rozpakowany string: ${string}`);
 
   if(string.match(pattern)){
 		algo(string);
   }else{
-	  console.log("\nWynik: " +string);
+	  console.log(`\nWynik: ${string}`);
   }
 }
 
