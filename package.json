@@ -4,7 +4,7 @@
   "description": "- node test.js fg2[a]3[b]fdgdf2[c]2[c2[c2[c2[c2[c2[c2[c2[c2[c2[c]]]]]]]]]]2[d]2[w]asdas4[k]\r - node test.js aaasa2[aasd]sdsd3[bc]sadasd\r - node test.js xxx2[xxa2[b]yy2[c]yy]ff2[d]xx\r - node test.js aa2[a3[b]2[x]]1[a]",
   "main": "test.js",
   "scripts": {
-    "start": "budo test.js --live",
+    "start": "budo babel.js --live",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,8 +20,13 @@
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "babelify": "^7.3.0"
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-rename": "^1.2.2"
   },
   "browserify": {
     "transform": [

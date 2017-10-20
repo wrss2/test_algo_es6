@@ -1,17 +1,13 @@
 require('babel-core/register');
-
+//require("babel-core").transform(es5Code, options)
 var count = 0;
 const ps1 = "fg2[a]3[b]fdgdf2[c]2[c2[c2[c2[c2[c2[c2[c2[c2[c2[c]]]]]]]]]]2[d]2[w]asdas4[k]";
 const ps2 = "aaasa2[aasd]sdsd3[bc]sadasd";
 const ps3 = "xxx2[xxa2[b]yy2[c]yy]ff2[d]xx";
+const ps4 = "2[a2[b]y2[c]]";
 const args = process.argv;
 
-
-if(args[2]){
-	var ciag = args[2]
-}else{
-	ciag = ps3
-}
+var ciag = args[2] ? args[2] : ps4;
 
 console.log(`Spakowane dane: ${ciag}\n`);
 
@@ -29,9 +25,9 @@ Object.defineProperty(Array.prototype, 'optForEach', {
 });
 
 
-var algo = function(string){
+var algo = (string) => {
    var pattern = /(\d+\[)[a-zA-Z$]+(\])/ig
-   arr = string.match(pattern);
+   var arr = string.match(pattern);
    if(arr){
 	   count++;
 	   arr.optForEach((val,index) =>{
