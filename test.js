@@ -12,7 +12,7 @@ if (args[2]) {
   ciag = ps3;
 }
 
-console.log(`Spakowane dane: ${ciag}\n`);
+console.log("Spakowane dane: " + ciag + "\n");
 
 function foreach(fn) {
   var arr = this;
@@ -26,13 +26,13 @@ Object.defineProperty(Array.prototype, 'optForEach', {
   enumerable: false,
   value: foreach
 });
- 
+
 var algo = function (string) {
   var pattern = /(\d+\[)[a-zA-Z$]+(\])/ig;
   arr = string.match(pattern);
   if (arr) {
     count++;
-    arr.optForEach( (val, index) => {
+    arr.optForEach((val, index) => {
       var rep = "";
       var num = val.match(/[\d]+/ig);
       var text = val.match(/[a-zA-Z]+/ig);
@@ -41,14 +41,14 @@ var algo = function (string) {
     });
   }
 
-  console.log(`Krok: ${count}`);
-  console.log(`Wyszukane wzorce: ${arr}`);
-  console.log(`Rozpakowany string: ${string}`);
+  console.log("Krok: " + count);
+  console.log("Wyszukane wzorce: " + arr);
+  console.log("Rozpakowany string: " + string);
 
   if (string.match(pattern)) {
     algo(string);
   } else {
-    console.log(`\nWynik: ${string}`);
+    console.log("\nWynik: " + string);
   }
 };
 

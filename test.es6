@@ -18,7 +18,7 @@ console.log("Spakowane dane: "+ciag+"\n");
 function foreach(fn) {
     var arr = this;
     var len = arr.length;
-    for(var i=0; i<len; ++i) {
+    for(let i=0; i<len; ++i) {
         fn(arr[i], i);
     }
 }
@@ -34,14 +34,11 @@ var algo = function(string){
    arr = string.match(pattern);
    if(arr){
 	   count++;
-	   arr.optForEach(function(val,index){
+	   arr.optForEach((val,index) =>{
 			var rep = ""
 			var num = val.match(/[\d]+/ig);
 			var text = val.match(/[a-zA-Z]+/ig);
-
-		//	for(var i = 0 ; i<num;++i){
-				rep = (text.toString()).repeat(num); 
-		//	}
+			rep = (text.toString()).repeat(num);
 			string = string.replace(val, rep);
 		});
    }
