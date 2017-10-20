@@ -12,7 +12,7 @@ if (args[2]) {
   ciag = ps3;
 }
 
-console.log("Spakowane dane: " + ciag + "\n");
+console.log(`Spakowane dane: ${ciag}\n`);
 
 function foreach(fn) {
   var arr = this;
